@@ -10,23 +10,57 @@ The application is an error logging and monitoring tool similar to Sentry or Rol
 
 Watch this video for a tour through the codebase.
 
-[![Codebase tour](docs/codebase-tour.jpg)](https://www.youtube.com/watch?v=a_Z0yUsChlY)
+[![Codebase tour](docs/codebase-tour.png)](https://youtu.be/jehH--7FnBo)
 
 ## Getting Started
 
-This project is built with Next.js, TypeScript, Cypress & styled-components among others. To start working on the project, first clone the repository and install the dependencies.
+### 1. Clone & Install
+
+This project is built with Next.js, TypeScript, Cypress & SCSS modules among others. To start working on the project, first clone the repository on your local machine and install the dependencies.
 
 ```bash
 npm install
 ```
 
-Then run the development server:
+### 2. Create .env File
+
+**copy the `.env.template` file to a new file called `.env`.** This file contains the required environment variables that are injected by Next.js via the `dotenv` package.
+
+### 3. Run Development Server
+
+Finally, run the development server:
 
 ```bash
 npm run dev
 ```
 
 Now you can open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+
+## Recommended VS Code Extensions
+
+This project uses tools like ESLint, Stylelint, and Prettier. To make the most of these tools it's recommended to install the corresponding extensions. For VS Code those are:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) (e.g. for auto-completion of SCSS variables)
+- [React CSS modules](https://marketplace.visualstudio.com/items?itemName=viijay-kr.react-ts-css) (e.g. to open the CSS class definition with CMD/Ctrl + click and warn about non-existent class names)
+
+The official Stylelint extension might need some adjustment of your `settings.json` file. If it doesn't work out of the box try adding these lines:
+
+```
+"css.validate": false,
+"less.validate": false,
+"scss.validate": false,
+"stylelint.validate": ["css", "scss"],
+```
+
+Additional extensions that I find very valuable are
+
+[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+[GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+[SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg)
+[GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) (paid)
 
 ## Tests
 

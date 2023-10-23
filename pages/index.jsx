@@ -1,25 +1,25 @@
-import styled from "styled-components";
 import { Routes } from "@config/routes";
-
-const Header = styled.header`
-  width: 100%;
-  height: 80px;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-`;
+import styles from "./index.module.scss";
 
 const IssuesPage = () => {
   return (
     <div>
-      <Header>
+      <header className={styles.header}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/icons/logo-large.svg" alt="Prolog logo" />
         <a href={Routes.projects}>Dashboard</a>
-      </Header>
+      </header>
+      <button
+        className={styles.contactButton}
+        onClick={() =>
+          alert(
+            "Implement this in Challenge 2 - Modal:\n\nhttps://profy.dev/rjs-challenge-modal",
+          )
+        }
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/icons/message.svg" alt="Contact" />
+      </button>
     </div>
   );
 };
