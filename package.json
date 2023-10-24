@@ -13,6 +13,7 @@
     "cypress": "cypress open",
     "cypress:run": "cypress run",
     "test": "jest --watch",
+    "test:cypress": "start-server-and-test dev http://localhost:3000 cypress:run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install"
@@ -61,6 +62,7 @@
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "sass": "^1.69.4",
+    "start-server-and-test": "^2.0.1",
     "storybook": "^7.5.1",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.0.0",
