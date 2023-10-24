@@ -1,7 +1,7 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ProjectCard } from "./project-card";
-import { ProjectLanguage, ProjectStatus } from "@features/projects";
+import { ProjectLanguage, ProjectStatus } from "@api/projects.types";
 
 export default {
   title: "Project/ProjectCard",
@@ -10,9 +10,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof ProjectCard>;
+} as Meta<typeof ProjectCard>;
 
-const Template: ComponentStory<typeof ProjectCard> = (props) => (
+const Template: StoryFn<typeof ProjectCard> = (props) => (
   <div style={{ width: 500, padding: 50 }}>
     <ProjectCard {...props} />
   </div>
